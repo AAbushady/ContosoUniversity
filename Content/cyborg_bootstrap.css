@@ -2512,7 +2512,6 @@ label {
 input[type="search"] {
   box-sizing: border-box;
   -webkit-appearance: none;
-  appearance: none;
 }
 input[type="radio"],
 input[type="checkbox"] {
@@ -4667,9 +4666,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   line-height: 1.42857143;
   color: #ffffff;
   text-decoration: none;
-  background-color: #222222;
+  background-color: #222222 !important;
   border: 1px solid #282828;
 }
+
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
@@ -4697,10 +4697,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
   z-index: 3;
-  color: #ffffff;
+  color: #fff;
   cursor: default;
-  background-color: #2a9fd6;
-  border-color: transparent;
+  background-color: #9933cc !important;
+  border-color: #9933cc !important;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
@@ -5775,7 +5775,6 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-  appearance: none;
 }
 .modal-open {
   overflow: hidden;
@@ -6679,7 +6678,7 @@ table,
 table a:not(.btn),
 .table a:not(.btn) {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 table .dropdown-menu a,
 .table .dropdown-menu a {

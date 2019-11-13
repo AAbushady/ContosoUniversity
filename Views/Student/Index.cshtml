@@ -24,7 +24,7 @@
         <th>
             @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter=ViewBag.CurrentFilter })
         </th>
-        <th>
+        <th style="cursor: default">
             First Name
         </th>
         <th>
@@ -47,9 +47,9 @@
                 @Html.DisplayFor(modelItem => item.EnrollmentDate)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                <input type="button" class="btn btn-xs btn-info" value="Edit" onclick="location.href='@Url.Action("Edit", "Student", new { id = item.ID })'" /> |
+                <input type="button" class="btn btn-xs btn-info" value="Details" onclick="location.href='@Url.Action("Details", "Student", new { id = item.ID })'" /> |
+                <input type="button" class="btn btn-xs btn-info" value="Delete" onclick="location.href='@Url.Action("Delete", "Student", new { id = item.ID })'" />
             </td>
         </tr>
     }
