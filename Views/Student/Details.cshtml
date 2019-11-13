@@ -59,6 +59,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    <input type="button" class="btn btn-xs btn-info" value="Edit" onclick="location.href='@Url.Action("Edit", "Student", new { id = Model.ID })'" /> |
+    <input type="button" class="btn btn-xs btn-info" value="Back to List" onclick="location.href='@Url.Action("Index", "Student")'" />
 </p>
