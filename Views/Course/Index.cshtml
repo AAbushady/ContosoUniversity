@@ -9,6 +9,15 @@
 <p>
     <input type="button" class="btn btn-xs btn-info" value="Create New" onclick="location.href='@Url.Action("Create", "Course")'" />
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Select Department: @Html.DropDownList("SelectedDepartment", "All")
+        <input type="submit" value="Filter" />
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>
