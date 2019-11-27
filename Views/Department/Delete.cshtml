@@ -53,9 +53,10 @@
         @Html.HiddenFor(model => model.DepartmentID)
         @Html.HiddenFor(model => model.RowVersion)
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-xs btn-info" /> |
+    <input type="button" class="btn btn-xs btn-info" value="Back to List" onclick="location.href='@Url.Action("Index", "Department")'" />
+
+</div>
     }
 </div>

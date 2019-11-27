@@ -4,7 +4,7 @@
 }
 <h2>Departments</h2>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <input type="button" class="btn btn-xs btn-info" value="Create New" onclick="location.href='@Url.Action("Create", "Department")'" />
 </p>
 <table class="table">
     <tr>
@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.Administrator.FullName)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.DepartmentID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.DepartmentID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.DepartmentID })
+                <input type="button" class="btn btn-xs btn-info" value="Edit" onclick="location.href='@Url.Action("Edit", "Department", new { id = item.DepartmentID })'" /> |
+                <input type="button" class="btn btn-xs btn-info" value="Details" onclick="location.href='@Url.Action("Details", "Department", new { id = item.DepartmentID })'" /> |
+                <input type="button" class="btn btn-xs btn-info" value="Delete" onclick="location.href='@Url.Action("Delete", "Department", new { id = item.DepartmentID })'" />
             </td>
         </tr>
     }

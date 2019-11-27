@@ -14,7 +14,7 @@
             Enter a number to multiply every course's credits by: @Html.TextBox("multiplier")
         </p>
         <p>
-            <input type="submit" value="Update" />
+            <input type="submit" value="Update" class="btn btn-sm btn-info"/>
         </p>
     }
 }
@@ -25,5 +25,5 @@
     </p>
 }
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    <input type="button" class="btn btn-xs btn-info" value="Back to List" onclick="location.href='@Url.Action("Index", "Course")'" />
 </div>
